@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      {{myInfoCtrl.notSignedUp}}
+      <br>
+      <button ng-if="myInfoCtrl.notSignedUp!==''" ui-sref="public.signup">Sign Up</button>
+    </div>
+    <div class="col-sm-5" ng-if="myInfoCtrl.notSignedUp===''">
+      <div class="menu-item-photo">
+        <div>{{myInfoCtrl.menuItem.short_name}}</div>
+        <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.menuItem.short_name}}.jpg" alt="{{myInfoCtrl.menuItem.name}}">
+      </div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title">{{myInfoCtrl.menuItem.name}}</h3>
+      <p class="menu-item-details">{{myInfoCtrl.menuItem.description}}</p>
+    </div>
+  </div>
+</div>
