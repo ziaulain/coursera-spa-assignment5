@@ -5,6 +5,12 @@
       <br>
       <button ng-if="myInfoCtrl.notSignedUp!==''" ui-sref="public.signup">Sign Up</button>
     </div>
+    <div class="col-xs-12" ng-if="myInfoCtrl.notSignedUp===''">
+      First Name : {{myInfoCtrl.user.firstName}} <br>
+      Last Name : {{myInfoCtrl.user.lastName}}<br>
+      Email : {{myInfoCtrl.user.email}}<br>
+      Phone No : {{myInfoCtrl.user.phoneNo}}<br>
+    </div>
     <div class="col-sm-5" ng-if="myInfoCtrl.notSignedUp===''">
       <div class="menu-item-photo">
         <div>{{myInfoCtrl.menuItem.short_name}}</div>

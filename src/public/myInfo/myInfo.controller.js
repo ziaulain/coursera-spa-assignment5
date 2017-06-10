@@ -10,6 +10,7 @@ function MyinfoController(user, ApiPath) {
   $ctrl.notSignedUp = '';
   $ctrl.basePath = ApiPath;
   if(user.item){
+    $ctrl.user = user;
     $ctrl.menuItem = user.item;
   } else {
     $ctrl.notSignedUp = 'Not Signed Up Yet. Sign up Now!';
